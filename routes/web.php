@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', ['auth' => true]); // Ganti auth jadi true ato false buat liat bentuk navbar kalo user udah login ato belum
+});
+
+Route::get('/product/{id}', function ($id) {
+    return view('product', ['auth' => true, 'id' => $id]);
 });

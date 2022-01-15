@@ -6540,6 +6540,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "./node_modules/@fortawesome/fontawesome-free/js/all.js");
 
+__webpack_require__(/*! ./profile */ "./resources/js/profile.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -6570,6 +6572,39 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/profile.js":
+/*!*********************************!*\
+  !*** ./resources/js/profile.js ***!
+  \*********************************/
+/***/ (() => {
+
+// Behavior before logged in
+if (document.querySelector('#login_button') !== null) {
+  document.querySelector('#login_button').addEventListener('click', function () {
+    document.querySelector('#login_popup').setAttribute('style', 'display: flex');
+  });
+  document.querySelector('#popup_close').addEventListener('click', function () {
+    document.querySelector('#login_popup').removeAttribute('style');
+  });
+} // Behavior after logged in
+
+
+if (document.querySelector('#profile_menu_button') !== null) {
+  document.querySelector('#profile_menu_button').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelector('#profile_menu').style.display = "block";
+    document.querySelector('#profile_menu').addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  });
+  document.querySelector('body').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelector('#profile_menu').style.display = "";
+  });
+}
 
 /***/ }),
 
