@@ -1,0 +1,7 @@
+naiki's table name and column name
+
+items(barang) = id_barang, nama_barang, harga_barang, stok_barang, warna_barang, detail_barang
+pesanans = id, user_id, tanggal, jumlah_harga
+pesanan_details = id, user_id, pesanan_id, jumlah, jumlah_harga
+users = id, name, email, alamat, handphone, passwordb
+
