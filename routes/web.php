@@ -33,5 +33,8 @@ Route::post('pesan/{id}', 'App\Http\Controllers\PesanController@pesan');
 Route::get('check-out', 'App\Http\Controllers\PesanController@check_out');
 Route::get('check-out-delete', 'App\Http\Controllers\PesanController@check_out_delete');
 Route::delete('check-out/{id}', 'App\Http\Controllers\PesanController@delete')->name('home');
+Route::get('/search', 'App\Http\Controllers\searchController@index')->name('home');
+
+// Route::get('pesan')
 
 // Route::get('konfirmasi-check-out', 'App\Http\Controllers\PesanController@konfirmasi');

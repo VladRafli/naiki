@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@if($item!=null)
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -66,7 +64,4 @@
         </div>
     </div>
 </div>
-@else
-    <p>Data Tidak Ada</p>
-@endif
 @endsection

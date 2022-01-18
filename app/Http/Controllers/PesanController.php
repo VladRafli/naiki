@@ -123,36 +123,5 @@ class PesanController extends Controller
         return redirect('check-out');
     }
 
-    public function konfirmasi()
-    {
-        $user = User::where('id', Auth::user()->id)->first();
 
-        if(empty($user->alamat))
-        {
-            Alert::error('Data alamat tidak ditemukan, harap isi', 'Error');
-            return redirect('profile');
-        }
-
-        if(empty($user->nohp))
-        {
-            Alert::error('Nomor handphone tidak ditemukan, harap isi', 'Error');
-            return redirect('profile');
-        }
-
-        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
-        $pesanan_id = $pesanan->id;
-        $pesanan->status = 1;
-        $pesanan->update();
-
-        $pesanan_details = PesananDetail::where('pesanan_id', $pesanan_id)->get();
-        foreach ($pesanan_details as $pesanan_detail) {
-            $barang = Item::where('id', $pesanan_detail->barang_id)->first();
-            $barang->stok = $barang->stok-$pesanan_detail->jumlah;
-            $barang->update();
-        }
-
-        Alert::success('Checkout berhasil, mohon pembayaran diselesaikan segera', 'Success');
-        return redirect('history/'.$pesanan_id);
-
-    }
 }

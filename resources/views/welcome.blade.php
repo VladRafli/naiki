@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>NAIKdsadaI</title>
+        <title>NAIKI</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -37,9 +37,8 @@
             @endif
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0" style="display:flex;justify-content:center;">
                     <a  href="{{url ('/home') }}"><img src="http://localhost/naiki/public/images/logowhite.png" class="center" width="700" alt=""></a>
-                    
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
@@ -50,6 +49,11 @@
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
+                            <p class="text-lg" style="text-align:center;">EMANUEL LIENARDI  2301865716</p>
+                            <p class="text-lg" style="text-align:center;">Michael Kwan  2301877565</p>
+                            <p class="text-lg" style="text-align:center;">Rafli Athala Jaskandi  2301943402</p>
+                            <p class="text-lg" style="text-align:center;">Vanessa Ratana Yoe  2301869424</p>
+                            <p class="text-lg" style="text-align:center;">Ziven Christopher  2301860116</p>
                             
                         </div>
                     </div>
